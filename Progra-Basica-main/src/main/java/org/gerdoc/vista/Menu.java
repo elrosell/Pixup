@@ -12,10 +12,10 @@ public class Menu
 
     public static void menuPrincipal()
     {
-        System.out.println("\n\t::: Menú principal :::");
+        System.out.println("\n\tMenú principal");
         System.out.println("\t> Selecciona una opción:");
-        System.out.println("1. Catálogo");
-        System.out.println("2. Pendiente");
+        System.out.println("1. dataCenter");
+        System.out.println("2. Ventana (out of service)");
         System.out.println("3. Salir");
     }
 
@@ -36,7 +36,7 @@ public class Menu
 
     public static void menuCatalogo( )
     {
-        System.out.println("\n\t:: Catálogo ::");
+        System.out.println("\n\t:: dataCenter ::");
         System.out.println("1. Estados");
         System.out.println("2. Municipios");
         System.out.println("3. Colonias");

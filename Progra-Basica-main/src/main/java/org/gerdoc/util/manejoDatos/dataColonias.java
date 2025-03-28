@@ -7,12 +7,12 @@ import org.gerdoc.vista.Menu;
 import java.util.HashMap;
 import java.util.Map;
 
-public class CatColonias implements Gestor
+public class dataColonias implements Gestor
 {
     private Map<Integer, Colonia> colonias = new HashMap<>();
-    private CatMunicipios catMunicipios;
+    private dataMunicipios catMunicipios;
 
-    public CatColonias(CatMunicipios catMunicipios) {
+    public dataColonias(dataMunicipios catMunicipios) {
         this.catMunicipios = catMunicipios;
     }
 

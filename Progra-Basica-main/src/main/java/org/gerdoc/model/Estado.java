@@ -1,6 +1,6 @@
 package org.gerdoc.model;
 
-public class Estado extends Entidad
+public class Estado extends Vivienda
 {
     public Estado() {
     }
