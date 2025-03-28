@@ -1,14 +1,14 @@
 package org.gerdoc.model;
 
-public abstract class Vivienda
+public abstract class Entidad
 {
     protected Integer id;
     protected String nombre;
 
-    public Vivienda() {
+    public Entidad() {
     }
 
-    public Vivienda(Integer id, String nombre)
+    public Entidad(Integer id, String nombre)
     {
         this.id = id;
         this.nombre = nombre;

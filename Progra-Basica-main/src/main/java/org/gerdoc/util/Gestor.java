@@ -12,16 +12,11 @@ public interface Gestor
         opcion = ReadUtil.readInt();
 
         switch ( opcion ) {
-            case 1:
-                alta();
-            case 2:
-                baja();
-            case 3:
-                consulta();
-            case 4:
-                actualizar();
-            default:
-                Menu.opcionInvalida();
+            case 1 -> alta();
+            case 2 -> baja();
+            case 3 -> consulta();
+            case 4 -> actualizar();
+            default -> Menu.opcionInvalida();
         }
     };
     void alta();

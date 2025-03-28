@@ -6,7 +6,7 @@ import org.gerdoc.vista.Menu;
 import java.util.HashMap;
 import java.util.Map;
 
-public class dataEstados implements Gestor
+public class CatEstados implements Gestor
 {
     private Map<Integer, Estado> estados = new HashMap<>();
 
@@ -72,3 +72,4 @@ public class dataEstados implements Gestor
         return estados.get(id);
     }
 }
+

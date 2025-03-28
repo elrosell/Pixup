@@ -3,7 +3,7 @@ package org.gerdoc.model;
 import org.gerdoc.util.ReadUtil;
 import org.gerdoc.vista.Menu;
 
-public class Colonia extends Vivienda
+public class Colonia extends Entidad
 {
     private String cp;
     private Municipio municipio;

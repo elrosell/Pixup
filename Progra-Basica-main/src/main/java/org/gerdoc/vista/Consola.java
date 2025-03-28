@@ -1,6 +1,4 @@
 package org.gerdoc.vista;
-
-import org.gerdoc.model.TipoEjecutable;
 import org.gerdoc.util.ReadUtil;
 
 public class Consola implements Ejecutable {
@@ -28,7 +26,7 @@ public class Consola implements Ejecutable {
             opcion = ReadUtil.readInt( );
 
             switch (opcion) {
-                case 1 ->TipoEjecutable.getTipoEjecutableById(opcion);
+                case 1 -> Catálogo.menuCatalogo();
                 case 2 -> System.out.println("Opción no implementada aún - En desarrollo.");
                 case 3 -> flag = false;
                 default -> Menu.opcionInvalida();

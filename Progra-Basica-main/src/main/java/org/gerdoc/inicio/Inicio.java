@@ -21,7 +21,7 @@ public class Inicio {
 
             if( TipoEjecutable.SALIR.equals( tipoEjecutable ) )
             {
-                System.out.println("Saliendo de la aplicación...");
+                System.out.println("Saliendo del programa... bye :)");
                 flag = false;
             }
             if( TipoEjecutable.OPCION_ERRONEA.equals( tipoEjecutable ) )

@@ -7,13 +7,13 @@ import org.gerdoc.vista.Menu;
 import java.util.HashMap;
 import java.util.Map;
 
-public class dataColonias implements Gestor
+public class CatColonias implements Gestor
 {
     private Map<Integer, Colonia> colonias = new HashMap<>();
-    private dataColonias datacolonias;
+    private CatMunicipios catMunicipios;
 
-    public dataColonias(dataMunicipios dataMunicipios) {
-        this.datacolonias = datacolonias;
+    public CatColonias(CatMunicipios catMunicipios) {
+        this.catMunicipios = catMunicipios;
     }
 
     @Override
@@ -27,7 +27,7 @@ public class dataColonias implements Gestor
         Menu.leeIdMunicipio();
         Integer municipioId = ReadUtil.readInt();
 
-        Municipio municipio = municipioId();
+        Municipio municipio = catMunicipios.validarMunicipio( municipioId );
         if( municipio == null){
             System.out.println("> Municipio no encontrado.");
         }

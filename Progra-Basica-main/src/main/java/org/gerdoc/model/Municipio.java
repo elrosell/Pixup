@@ -1,6 +1,6 @@
 package org.gerdoc.model;
 
-public class Municipio extends Vivienda
+public class Municipio extends Entidad
 {
     private Estado estado;
 
