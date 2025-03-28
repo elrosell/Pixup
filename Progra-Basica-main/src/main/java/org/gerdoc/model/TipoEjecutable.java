@@ -1,16 +1,18 @@
 package org.gerdoc.model;
 
+import org.gerdoc.vista.Consola;
 import org.gerdoc.vista.Ejecutable;
 
 public enum TipoEjecutable {
     CONSOLA(1, Consola.getInstance()),
-    VENTANA(2, Ventana.getInstance()),
-    SALIR(3, null),
-    OPCION_ERRONEA(4, null);
+    OPCION_ERRONEA(2, null),
+    SALIR(3, null);
+
     private Integer id;
     private Ejecutable ejecutable;
 
-    TipoEjecutable(Integer id, Ejecutable ejecutable) {
+    TipoEjecutable(Integer id, Ejecutable ejecutable)
+    {
         this.id = id;
         this.ejecutable = ejecutable;
     }
@@ -19,17 +21,14 @@ public enum TipoEjecutable {
         return id;
     }
 
-    public static TipoEjecutable getTipoEjecutableById(int opcion) {
-        switch (opcion) {
-            case 1:
-                return CONSOLA;
-            case 2:
-                return VENTANA;
-            case 3:
-                return SALIR;
-            default:
-                return OPCION_ERRONEA;
-        }
+    public static TipoEjecutable getTipoEjecutableById(int opcion)
+    {
+        return switch (opcion)
+        {
+            case 1 -> CONSOLA;
+            case 2 -> SALIR;
+            default -> OPCION_ERRONEA;
+        };
     }
 
     public Ejecutable getEjecutable() {

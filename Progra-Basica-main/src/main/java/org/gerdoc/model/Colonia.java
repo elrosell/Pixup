@@ -1,41 +1,21 @@
 package org.gerdoc.model;
 
-public class Colonia
+import org.gerdoc.util.ReadUtil;
+import org.gerdoc.vista.Menu;
+
+public class Colonia extends Vivienda
 {
-    private Integer id;
-    private String nombre;
     private String cp;
     private Municipio municipio;
 
-    public Colonia()
-    {
+    public Colonia() {
     }
 
-    public Colonia(Integer id, String nombre, String cp, Municipio municipio) {
-        this.id = id;
-        this.nombre = nombre;
+    public Colonia(Integer id, String nombre, String cp, Municipio municipio)
+    {
+        super(id, nombre);
         this.cp = cp;
         this.municipio = municipio;
-    }
-
-    public Integer getId()
-    {
-        return id;
-    }
-
-    public void setId(Integer id)
-    {
-        this.id = id;
-    }
-
-    public String getNombre()
-    {
-        return nombre;
-    }
-
-    public void setNombre(String nombre)
-    {
-        this.nombre = nombre;
     }
 
     public String getCp()
@@ -57,4 +37,11 @@ public class Colonia
     {
         this.municipio = municipio;
     }
+
+    @Override
+    public String toString()
+    {
+        return "ID: "+getId()+"\nNombre: "+getNombre()+"\nCódigo postal: "+cp+"\nMunicipio: "+municipio.getNombre();
+    }
+
 }

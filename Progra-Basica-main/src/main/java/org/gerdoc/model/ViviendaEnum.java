@@ -19,7 +19,7 @@ public enum ViviendaEnum
             return tipo;
         }
 
-        public static ViviendaEnum getFiguraEnumById( Integer id )
+        public static ViviendaEnum get( Integer id )
         {
             switch( id )
             {

@@ -1,13 +1,42 @@
 package org.gerdoc.model;
 
-import org.gerdoc.vista.SolicitaDatos;
-
-public abstract class Vivienda implements SolicitaDatos
+public abstract class Vivienda
 {
-    public Vivienda(){}
+    protected Integer id;
+    protected String nombre;
 
-    public Integer Id;
+    public Vivienda() {
+    }
 
-    public String Nombre;
+    public Vivienda(Integer id, String nombre)
+    {
+        this.id = id;
+        this.nombre = nombre;
+    }
 
+    public Integer getId()
+    {
+        return id;
+    }
+
+    public void setId(Integer id)
+    {
+        this.id = id;
+    }
+
+    public String getNombre()
+    {
+        return nombre;
+    }
+
+    public void setNombre(String nombre)
+    {
+        this.nombre = nombre;
+    }
+
+    @Override
+    public String toString()
+    {
+        return "ID: "+id+"\nNombre: "+nombre;
+    }
 }

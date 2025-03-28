@@ -1,19 +1,18 @@
 package org.gerdoc.vista;
 
-import org.gerdoc.model.Vivienda;
-import org.gerdoc.model.ViviendaEnum;
+import org.gerdoc.model.TipoEjecutable;
 import org.gerdoc.util.ReadUtil;
-import org.gerdoc.util.ViviendaFactory;
 
 public class Consola implements Ejecutable {
     private static Consola consola;
 
-    private Consola() {
+    public Consola() {
     }
 
     public static Consola getInstance() {
-        if (consola == null) {
-            return new Consola();
+        if(consola == null)
+        {
+            consola = new Consola();
         }
         return consola;
     }
@@ -21,28 +20,19 @@ public class Consola implements Ejecutable {
     @Override
     public void run() {
         boolean flag = true;
-        int opcion = 0;
-        ViviendaEnum viviendaEnum = null;
-        while (flag) {
-            Menu.principal();
-            Menu.seleccionaOpcion();
-            opcion = ReadUtil.readInt();
+        int opcion, subOpcion;
 
-            ViviendaEnum = viviendaEnum.getFiguraEnumById(opcion);
+        while( flag ){
+            Menu.menuPrincipal( );
+            Menu.seleccionaOpcion( );
+            opcion = ReadUtil.readInt( );
 
-            if (ViviendaEnum.SALIR.equals(viviendaEnum)) {
-                flag = false;
-            }
-            if (ViviendaEnum.OPCION_ERRONEA.equals(viviendaEnum)) {
-                Menu.opcionInvalida();
-            }
-
-            viviendaEnum = ViviendaFactory.getFiguraByFiguraEnum(viviendaEnum);
-            if (Vivienda != null) {
-                ((SolicitaDatos) Vivienda).leeDatos();
-                Menu.calcula(Vivienda);
+            switch (opcion) {
+                case 1 ->TipoEjecutable.getTipoEjecutableById(opcion);
+                case 2 -> System.out.println("Opción no implementada aún - En desarrollo.");
+                case 3 -> flag = false;
+                default -> Menu.opcionInvalida();
             }
         }
-
     }
 }
